@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <script type="text/javascript" charset="utf-8">
+
+            var names = [
+                "Adrian", "Jamie", "Polk", "Sam", "Stu",
+                "Stu", "Dean", "Kai", "Rob", "Rob",
+                "Paul E", "Hannah", "Heather", "Stuart Frost", "Alison",
+                "Pat", "Matt", "Matt", "Jack", "Pat",
+                "Jack", "Alison", "Steven", "Sam", "Adrian"
+            ];
+
+            function displayWinningSquare() {
+                // Number between 0 and 24
+                var winningSquare = Math.floor((Math.random() * 25));
+                var winningSquareId = "square" + winningSquare;
+                document.getElementById(winningSquareId).style.backgroundColor = "#74AFAD";
+                document.getElementById(winningSquareId).style.color = "#FFFFFF";
+                document.getElementById(winningSquareId).innerHTML = names[winningSquare];
+                document.getElementById("pickButton").style.visibility = "hidden";
+            }
+
+        </script>
+
+        <style media="screen" type="text/css">
+            p {
+                text-align: center;
+                font-size: 24pt;
+                font-family: sans-serif;
+            }
+
+            button {
+                margin: 0 auto;
+                display: block;
+                margin-top: 20px;
+            }
+
+            table {
+                margin: 0 auto;
+            }
+
+            table td {
+                font-family: sans-serif;
+                width: 150px;
+                height: 150px;
+                background-color: #ECECEA;
+                text-align: center;
+            }
+        </style>
+
+        <title>Winning Square</title>
+    </head>
+
+    <body>
+        <p>The winning square is</p>
+        
+        <table>
+            <tbody>
+                <tr>
+                    <td id="square0">1</td>
+                    <td id="square1">2</td>
+                    <td id="square2">3</td>
+                    <td id="square3">4</td>
+                    <td id="square4">5</td>
+                </tr>
+                <tr>
+                    <td id="square5">6</td>
+                    <td id="square6">7</td>
+                    <td id="square7">8</td>
+                    <td id="square8">9</td>
+                    <td id="square9">10</td>
+                </tr>
+                <tr>
+                    <td id="square10">11</td>
+                    <td id="square11">12</td>
+                    <td id="square12">13</td>
+                    <td id="square13">14</td>
+                    <td id="square14">15</td>
+                </tr>
+                <tr>
+                    <td id="square15">16</td>
+                    <td id="square16">17</td>
+                    <td id="square17">18</td>
+                    <td id="square18">19</td>
+                    <td id="square19">20</td>
+                </tr>
+                <tr>
+                    <td id="square20">21</td>
+                    <td id="square21">22</td>
+                    <td id="square22">23</td>
+                    <td id="square23">24</td>
+                    <td id="square24">25</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button id="pickButton" onclick="displayWinningSquare()">Pick Square</button>
+
+    </body>
+</html>
